@@ -1,1 +1,2 @@
-gcc -o ft_echo *.c
+flags="-Wall -Werror -Wextra"
+gcc $flags -o ft_echo *.c

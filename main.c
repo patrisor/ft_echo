@@ -20,12 +20,9 @@ int	ft_strcmp(const char *s1, const char *s2)
 	if (!s1 || !s2)
 		return (0);
 	value = 0;
-	i = 0;
-	while (value == 0 && (s1[i] || s2[i]))
-	{
+	i = -1;
+	while (value == 0 && (s1[++i] || s2[i]))
 		value += ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
-		i++;
-	}
 	return (value);
 }
 
