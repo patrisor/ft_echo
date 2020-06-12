@@ -44,11 +44,11 @@ int	ft_putstr_echo(char *str, int *nl)
 		if (str[i] == 92 && str[++i] == 99)
 		{
 			*nl = 1;
-			return (2);
+			return (1);
 		}
 		ft_putchar(str[i]);
 	}
-	return (1);
+	return (0);
 }
 
 /**
@@ -70,7 +70,7 @@ int	ft_echo(char **argv)
 		if (hit) // Adds spaces in between args
 			ft_putchar(' ');
 		hit = 1;
-		if (ft_putstr_echo(argv[i], &nl) == 2) // Prints argument
+		if (ft_putstr_echo(argv[i], &nl)) // Prints argument
 			break;
 	}
 	if (!nl)
